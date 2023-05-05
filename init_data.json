@@ -1,0 +1,95 @@
+[
+
+
+    {
+      "model": "index.baseinfo",
+      "pk": 1,
+      "fields": {
+          "phone_number": "+7(1111) 11-11-11",
+          "email": "example@example.com",
+          "instagram_link": "https://www.instagram.com/example/",
+          "vk_link": "https://vk.com/example"
+      }
+    },
+
+    {
+      "model": "index.contact",
+      "fields": {
+        "name": "Иван Иванов",
+        "phone_number": "+7(999)123-45-67",
+        "email": "ivan@example.com",
+        "message": "Привет, я хотел бы узнать больше о вашей компании"
+      }
+    },
+
+    {
+      "model": "index.contact",
+      "fields": {
+        "name": "Петр Петров",
+        "phone_number": "+7(999)765-43-21",
+        "email": "petr@example.com",
+        "message": "Добрый день, у меня возник вопрос по поводу вашей продукции"
+      }
+    },
+
+    {
+      "model": "index.contact",
+      "fields": {
+        "name": "Мария Сидорова",
+        "phone_number": "+7(999)111-11-11",
+        "email": "maria@example.com",
+        "message": "Здравствуйте, я хотела бы заказать ваш товар"
+      }
+    },
+
+    {
+        "model": "index.firstsection",
+        "pk": 1,
+        "fields": {
+            "header": "Example Header",
+            "secondary_header": "Example Secondary Header",
+            "description": "Example description",
+            "first_slide": "index_page/first_section/first_slide/intro-slide-11.jpg",
+            "second_slide": "index_page/first_section/second_slide/intro-slide-2.webp",
+            "third_slide": "index_page/first_section/third_slide/intro-slide-3.webp",
+            "fourth_slide": "index_page/first_section/fourth_slide/intro-slide-4.webp"
+        }
+    },
+
+    {
+      "model": "index.secondsection",
+      "pk": 1,
+      "fields": {
+        "header": "Example header",
+        "secondary_header": "Example secondary header",
+        "first_object_image": "index_page/second_section/first_object/project-1.webp",
+        "second_object_image": "index_page/second_section/second_object/project-2.webp",
+        "third_object_image": "index_page/second_section/third_object/project-3.webp",
+        "first_object_header": "Example first object header",
+        "second_object_header": "Example second object header",
+        "third_object_header": "Example third object header",
+        "first_object_desc": "Example first object description",
+        "second_object_desc": "Example second object description",
+        "third_object_desc": "Example third object description"
+      }
+    },
+
+    {
+      "model": "index.thirdsection",
+      "pk": 1,
+      "fields": {
+          "header": "Заголовок",
+          "secondary_header": "Второстепенный заголовок",
+          "first_slide": "index_page/third_section/first_slide/production-slide-1.webp",
+          "second_slide": "index_page/third_section/second_slide/production-slide-2.webp",
+          "third_slide": "index_page/third_section/third_slide/production-slide-3.webp",
+          "fourth_slide": "index_page/third_section/fourth_slide/production-slide-4.webp",
+          "first_point": "Первый пункт",
+          "second_point": "Второй пункт",
+          "third_point": "Третий пункт"
+      }
+    }
+]
+
+
+

@@ -1,0 +1,533 @@
+{% load static %}
+
+<!--
+
+╔╔╗╔╔╔═╔═  ╔╗╦║║╦╗╦╔╗
+║║║╠╠╠═╠═  ╚╗║║║║║║║║
+╚╚╝║║╚═╚═  ╚╝║╚╝╩╝╩╚╝
+
+www.coffeestudio.ru
+support: web@coffeestudio.ru
+creature: 2020
+
+-->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1 , viewport-fit=cover">
+  <meta content="telephone=no" name="format-detection">
+  <meta name="HandheldFriendly" content="true">
+
+  <title>Разработка сайтов и Интернет реклама - агентство Интернет-рекламы Coffee Studio</title>
+  <meta name="description" content="Агентство Интернет-рекламы Coffee Studio предлагает полный комплекс услуг по продвижению Вашего бизнеса в Интернет.">
+  <meta name="keywords" content="псков, создание сайтов, интернет реклама, редизайн, раскрутка, продвижение, обслуживание сайтов, администрирование">
+  <link rel="canonical" href="">
+
+  <link href="{% static 'index/css/plugins.css' %}" type="text/css" rel="stylesheet">
+  <link href="{% static 'index/css/styles.css' %}" type="text/css" rel="stylesheet">
+
+  <link href="{% static 'index/css/index.css' %}" type="text/css" rel="stylesheet">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="{% static 'index/favicon/apple-touch-icon.png' %}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{% static 'index/favicon/favicon-32x32.png' %}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{% static 'index/favicon/favicon-16x16.png' %}">
+  <link rel="manifest" href="{% static 'index/favicon/site.webmanifest' %}">
+  <link rel="mask-icon" href="{% static 'index/favicon/safari-pinned-tab.svg' %}" color="#5bbad5">
+  <link rel="shortcut icon" href="{% static 'index/favicon/favicon.ico' %}">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-config" content="favicon/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+
+  <!--og-->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://example.com/page.html">
+  <meta property="og:title" content="Content Title">
+  <meta property="og:image" content="https://example.com/image.jpg">
+  <meta property="og:description" content="Description Here">
+  <meta property="og:site_name" content="Site Name">
+  <meta property="og:locale" content="en_US">
+  <!-- Следующие теги не обязательны, но рекомендованы -->
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <!--twitter -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@site_account">
+  <meta name="twitter:creator" content="@individual_account">
+  <meta name="twitter:url" content="https://example.com/page.html">
+  <meta name="twitter:title" content="Content Title">
+  <meta name="twitter:description" content="Content description less than 200 characters">
+  <meta name="twitter:image" content="https://example.com/image.jpg">
+</head>
+<body class="">
+  <div class="container">
+    <div class="content">
+      <header class="header">
+        <div class="wrapper header__wrapper">
+          <a href="/" class="header-logo">
+            <img src="{% static 'index/images/logo.svg' %}" alt="ДорСтройСервис" title="ДорСтройСервис">
+          </a>
+          <div class="header-burger js-burger-open">
+            <svg width="40" height="32" viewBox="0 0 40 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="40" height="6" fill="#F2BD4B" />
+              <rect y="26" width="40" height="6" fill="#F2BD4B" />
+              <rect y="13" width="40" height="6" fill="#F2BD4B" />
+            </svg>
+
+          </div>
+          <div class="header-content">
+            <div class="header-burger--close js-burger-close">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 2L18 0L10 8L2 0L0 2L8 10L0 18L2 20L10 12L18 20L20 18L12 10L20 2Z" fill="#333333" />
+              </svg>
+
+            </div>
+            <div class="header-content__top">
+              <div class="header-contacts">
+                <a href="#0" class="header-contacts__item header-contacts__item--email">{{base_info.email}}</a>
+                <a href="#0" class="header-contacts__item header-contacts__item--phone">{{base_info.phone_number}}</a>
+              </div>
+
+              <div class="header-right">
+                <div class="header-socials">
+                  <a href="{{base_info.instagram_link}}" class="header-socials__item" target="_blank" title="Мы">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M22.2295 7.76217C22.1813 6.66913 22.0045 5.91767 21.7513 5.26653C21.4901 4.57535 21.0882 3.95655 20.5617 3.44213C20.0473 2.9197 19.4244 2.51376 18.7413 2.25663C18.0863 2.00342 17.3388 1.82666 16.2458 1.77847C15.1446 1.7262 14.795 1.71411 12.002 1.71411C9.20908 1.71411 8.85949 1.7262 7.76237 1.77439C6.66934 1.82258 5.91788 1.9995 5.26689 2.25255C4.57556 2.51376 3.95676 2.91562 3.44234 3.44213C2.91992 3.95655 2.51413 4.57943 2.25684 5.2626C2.00364 5.91767 1.82688 6.66505 1.77869 7.75809C1.72641 8.85929 1.71432 9.20888 1.71432 12.0018C1.71432 14.7948 1.72641 15.1444 1.7746 16.2415C1.8228 17.3345 1.99971 18.086 2.25292 18.7371C2.51413 19.4283 2.91992 20.0471 3.44234 20.5615C3.95676 21.084 4.57964 21.4899 5.26281 21.747C5.91788 22.0002 6.66525 22.177 7.75845 22.2252C8.85541 22.2735 9.20516 22.2855 11.9981 22.2855C14.7911 22.2855 15.1407 22.2735 16.2378 22.2252C17.3308 22.177 18.0823 22.0002 18.7333 21.747C20.1158 21.2125 21.2088 20.1195 21.7433 18.7371C21.9964 18.0821 22.1733 17.3345 22.2215 16.2415C22.2697 15.1444 22.2817 14.7948 22.2817 12.0018C22.2817 9.20888 22.2777 8.85929 22.2295 7.76217ZM20.377 16.1611C20.3327 17.1658 20.1639 17.7083 20.0233 18.07C19.6776 18.9662 18.9664 19.6774 18.0702 20.0231C17.7085 20.1638 17.1621 20.3325 16.1613 20.3766C15.0763 20.425 14.7509 20.4369 12.0061 20.4369C9.26136 20.4369 8.93186 20.425 7.85075 20.3766C6.84609 20.3325 6.30358 20.1638 5.9419 20.0231C5.49592 19.8583 5.08998 19.5971 4.76048 19.2555C4.4189 18.9219 4.15769 18.52 3.99286 18.0741C3.85221 17.7124 3.68346 17.1658 3.63935 16.1652C3.591 15.0802 3.57907 14.7546 3.57907 12.0098C3.57907 9.26508 3.591 8.93558 3.63935 7.85463C3.68346 6.84997 3.85221 6.30745 3.99286 5.94577C4.15769 5.49964 4.4189 5.09385 4.76456 4.7642C5.09799 4.42261 5.49985 4.1614 5.94598 3.99673C6.30766 3.85608 6.85426 3.68733 7.85483 3.64306C8.93987 3.59487 9.26544 3.58278 12.01 3.58278C14.7589 3.58278 15.0843 3.59487 16.1654 3.64306C17.1701 3.68733 17.7126 3.85608 18.0743 3.99673C18.5202 4.1614 18.9262 4.42261 19.2557 4.7642C19.5973 5.09778 19.8585 5.49964 20.0233 5.94577C20.1639 6.30745 20.3327 6.85389 20.377 7.85463C20.4252 8.93966 20.4372 9.26508 20.4372 12.0098C20.4372 14.7546 20.4252 15.0761 20.377 16.1611Z" fill="white" />
+                      <path d="M12.002 6.71765C9.08451 6.71765 6.71744 9.08457 6.71744 12.0022C6.71744 14.9198 9.08451 17.2867 12.002 17.2867C14.9195 17.2867 17.2865 14.9198 17.2865 12.0022C17.2865 9.08457 14.9195 6.71765 12.002 6.71765ZM12.002 15.4301C10.1093 15.4301 8.57402 13.895 8.57402 12.0022C8.57402 10.1093 10.1093 8.57423 12.002 8.57423C13.8948 8.57423 15.4299 10.1093 15.4299 12.0022C15.4299 13.895 13.8948 15.4301 12.002 15.4301Z" fill="white" />
+                      <path d="M18.729 6.50848C18.729 7.18976 18.1766 7.74217 17.4952 7.74217C16.8139 7.74217 16.2615 7.18976 16.2615 6.50848C16.2615 5.82703 16.8139 5.27478 17.4952 5.27478C18.1766 5.27478 18.729 5.82703 18.729 6.50848Z" fill="white" />
+                    </svg>
+
+                  </a>
+                  <a href="{{base_info.vk_link}}" class="header-socials__item" target="_blank" title="Мы">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0)">
+                        <path d="M22.9365 18.1559C22.8743 18.0517 22.4896 17.2156 20.638 15.4971C18.6996 13.6976 18.96 13.9898 21.2947 10.8783C22.7167 8.98329 23.2852 7.82605 23.1072 7.33133C22.938 6.85975 21.8921 6.98416 21.8921 6.98416L18.4146 7.00441C18.4146 7.00441 18.1571 6.96969 17.9648 7.08397C17.7782 7.1968 17.6581 7.45718 17.6581 7.45718C17.6581 7.45718 17.107 8.92398 16.3721 10.1709C14.8229 12.8022 14.2023 12.9411 13.9491 12.7776C13.3604 12.3971 13.5079 11.2471 13.5079 10.4313C13.5079 7.88102 13.8942 6.8178 12.7543 6.54296C12.3753 6.45183 12.0976 6.39107 11.1298 6.38095C9.88868 6.36793 8.83704 6.38528 8.24251 6.67604C7.84615 6.86988 7.54093 7.3024 7.72754 7.32699C7.95754 7.35737 8.4783 7.4673 8.75459 7.84341C9.11188 8.328 9.09886 9.4187 9.09886 9.4187C9.09886 9.4187 9.30427 12.4203 8.62006 12.7935C8.14993 13.0495 7.50622 12.5273 6.12476 10.1391C5.4174 8.91675 4.88218 7.56422 4.88218 7.56422C4.88218 7.56422 4.77947 7.31252 4.59576 7.17799C4.37299 7.01453 4.06054 6.96246 4.06054 6.96246L0.75373 6.98271C0.75373 6.98271 0.257564 6.99718 0.0752993 7.21271C-0.0867141 7.4051 0.0622804 7.80146 0.0622804 7.80146C0.0622804 7.80146 2.6516 13.8582 5.58231 16.9118C8.27144 19.7109 11.3237 19.5272 11.3237 19.5272H12.7066C12.7066 19.5272 13.1246 19.4809 13.3373 19.2509C13.534 19.0397 13.5267 18.6434 13.5267 18.6434C13.5267 18.6434 13.4993 16.7874 14.3614 16.514C15.2105 16.245 16.3012 18.3078 17.457 19.1019C18.3307 19.7022 18.9947 19.5706 18.9947 19.5706L22.086 19.5272C22.086 19.5272 23.7032 19.4274 22.9365 18.1559Z" fill="white" />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0">
+                          <path d="M0 0H24V24H0V0Z" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+
+                  </a>
+                </div>
+
+                <a href="#write-us-modal" class="btn btn--orange header__write-us" data-modal>
+                  Написать нам
+                </a>
+
+              </div>
+
+            </div>
+            <div class="header-content__bottom">
+              <nav class="header-nav">
+                <ul class="header-nav__list">
+                  <li class="header-nav__item">
+                    <!-- Активному пункту меню вывести класс active -->
+                    <a href="#0" class="header-nav__link active">Главная</a>
+                  </li>
+                  <li class="header-nav__item">
+                    <a href="#0" class="header-nav__link">о нас</a>
+                  </li>
+                  <li class="header-nav__item">
+                    <a href="#0" class="header-nav__link">услуги</a>
+                  </li>
+                  <li class="header-nav__item">
+                    <a href="#0" class="header-nav__link">каталог</a>
+                  </li>
+                  <li class="header-nav__item">
+                    <a href="#0" class="header-nav__link">объекты</a>
+                  </li>
+                  <li class="header-nav__item">
+                    <a href="#0" class="header-nav__link">новости</a>
+                  </li>
+                  <li class="header-nav__item">
+                    <a href="#0" class="header-nav__link">производственная база</a>
+                  </li>
+                  <li class="header-nav__item">
+                    <a href="#0" class="header-nav__link">контакты</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="intro">
+        <div class="intro-content">
+          <div class="wrapper intro-content__wrapper">
+            <div class="header-block intro-content__title">
+              <h1>{{first_section.header}}</h1>
+              <div class="header-block__text header-block__text--1">{{first_section.header|linebreaksbr}}</div>
+            </div>
+            <div class="intro-content__text">
+              <!-- Текст из админки start -->
+              <p>{{first_section.secondary_header}}</p>
+              <p>{{first_section.description|linebreaksbr}}</p>
+              <!-- Текст из админки end -->
+              <a href="#0" class="btn btn--orange intro-content__btn">Подробнее</a>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-container intro-slider js-intro-slider">
+          <div class="swiper-wrapper no-swiping">
+            <div class="swiper-slide intro-slider__slide">
+              <picture>
+                <img src="{{first_section.first_slide.url}}" alt="slide_first">
+              </picture>
+            </div>
+            <div class="swiper-slide intro-slider__slide">
+              <picture>
+                <img src="{{first_section.second_slide.url}}" alt="slide_second">
+              </picture>
+            </div>
+            <div class="swiper-slide intro-slider__slide">
+              <picture>
+                <img src="{{first_section.third_slide.url}}" alt="slide_third">
+              </picture>
+            </div>
+            <div class="swiper-slide intro-slider__slide">
+              <picture>
+                <img src="{{first_section.fourth_slide.url}}" alt="slide_fourth">
+              </picture>
+            </div>
+          </div>
+          <div class="intro-slider__pagination"></div>
+          <div class="intro-slider__controls">
+            <button type="button" class="intro-slider__btn intro-slider__btn--prev"></button>
+
+            <div class="intro-slider__numbers">
+              <span class="current js-intro-slider__current">1</span>/<span class="count js-intro-slider__count"></span>
+            </div>
+
+            <button type="button" class="intro-slider__btn intro-slider__btn--next"></button>
+          </div>
+        </div>
+      </div>
+      <section class="projects">
+        <div class="wrapper projects__wrapper">
+          <div class="projects-top">
+            <div class="header-block">
+              <h2>{{second_section.header|linebreaksbr}}</h2>
+              <div class="header-block__text header-block__text--2">{{second_section.header|linebreaksbr}}</div>
+            </div>
+            <a href="#0" class="projects-all">{{second_section.secondary_header|linebreaksbr}}</a>
+          </div>
+          <ul class="projects-items">
+            <li class="projects-item">
+              <a href="#0" class="project">
+                <div class="project-image">
+                  <picture>
+                    <img src="{{second_section.first_object_image.url}}" alt="{{second_section.first_object_header|linebreaksbr}}">
+                  </picture>
+                </div>
+                <div class="project-overlay"></div>
+                <h3 class="project-title">{{second_section.first_object_header|linebreaksbr}}</h3>
+                <div class="project-hover">
+                  <div>
+                    <h3 class="project-hover__title">{{second_section.first_object_header|linebreaksbr}}</h3>
+                    <!-- Текст из админки start -->
+                    <p>{{second_section.first_object_desc|linebreaksbr}}</p>
+                    <!-- Текст из админки end -->
+                  </div>
+                  <div class="project-hover__read">
+                    Читать
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="projects-item">
+              <a href="#0" class="project">
+                <div class="project-image">
+                  <picture>
+                    <img src="{{second_section.second_object_image.url}}" alt="{{second_section.second_object_header|linebreaksbr}}">
+                  </picture>
+                </div>
+                <div class="project-overlay"></div>
+                <h3 class="project-title">{{second_section.second_object_header|linebreaksbr}}</h3>
+                <div class="project-hover">
+                  <div>
+                    <h3 class="project-hover__title">{{second_section.second_object_header|linebreaksbr}}</h3>
+                    <!-- Текст из админки start -->
+                    <p>{{second_section.second_object_desc|linebreaksbr}}</p>
+                    <!-- Текст из админки end -->
+                  </div>
+                  <div class="project-hover__read">
+                    Читать
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="projects-item">
+              <a href="#0" class="project">
+                <div class="project-image">
+                  <picture>
+                    <img src="{{second_section.third_object_image.url}}" alt="{{second_section.third_object_header|linebreaksbr}}">
+                  </picture>
+                </div>
+                <div class="project-overlay"></div>
+                <h3 class="project-title">{{second_section.third_object_header|linebreaksbr}}</h3>
+                <div class="project-hover">
+                  <div>
+                    <h3 class="project-hover__title">{{second_section.third_object_header|linebreaksbr}}</h3>
+                    <!-- Текст из админки start -->
+                    <p>{{second_section.third_object_desc|linebreaksbr}}</p>
+                    <!-- Текст из админки end -->
+                  </div>
+                  <div class="project-hover__read">
+                    Читать
+                  </div>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="production">
+        <div class="wrapper production__wrapper">
+          <div class="header-block">
+            <h2>{{third_section.header|linebreaksbr}}</h2>
+            <div class="header-block__text header-block__text--2 header-block__text--black">{{third_section.header|linebreaksbr}}</div>
+          </div>
+
+          <div class="swiper-container production-slider js-production-slider">
+            <div class="swiper-wrapper">
+              <div class="production-slide swiper-slide">
+                <picture>
+                  <img src="{{third_section.first_slide.url}}" alt="production-slide_alt">
+                </picture>
+              </div>
+              <div class="production-slide swiper-slide">
+                <picture>
+                  <img src="{{third_section.second_slide.url}}" alt="production-slide_alt">
+                </picture>
+              </div>
+              <div class="production-slide swiper-slide">
+                <picture>
+                  <img src="{{third_section.third_slide.url}}" alt="production-slide_alt">
+                </picture>
+              </div>
+              <div class="production-slide swiper-slide">
+                <picture>
+                  <img src="{{third_section.fourth_slide.url}}" alt="production-slide_alt">
+                </picture>
+              </div>
+            </div>
+            <div class="production-slider__pagination js-product-slider-pagination"></div>
+            <button type="button" class="production-slider__btn production-slider__btn--prev"></button>
+            <button type="button" class="production-slider__btn production-slider__btn--next"></button>
+          </div>
+
+          <div class="production-info">
+            <h3 class="production-info__title">{{third_section.secondary_header|linebreaksbr}}</h3>
+            <ul class="production-info__list">
+              <li class="production-info__item">{{third_section.first_point|linebreaksbr}}</li>
+              <li class="production-info__item">{{third_section.second_point|linebreaksbr}}</li>
+              <li class="production-info__item">{{third_section.third_point|linebreaksbr}}</li>
+            </ul>
+            <a href="#0" class="btn btn--orange production-info__link">Читать</a>
+          </div>
+        </div>
+      </section>
+      <section class="instagram">
+        <div class="wrapper instagram__wrapper">
+          <div class="header-block">
+            <h2>Мы в Instagram</h2>
+            <div class="header-block__text header-block__text--2 header-block__text--black">Мы<br>в Instagram</div>
+          </div>
+          <div class="instagram__slider swiper-container js-insta-slider">
+            <div class="swiper-wrapper">
+            </div>
+            <div class="swiper-button instagram-button instagram-button-prev">
+              <span class="icon">
+                <svg width="17" height="8" viewBox="0 0 17 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16.3536 4.35355C16.5488 4.15829 16.5488 3.84171 16.3536 3.64645L13.1716 0.464467C12.9763 0.269205 12.6597 0.269205 12.4645 0.464467C12.2692 0.659729 12.2692 0.976312 12.4645 1.17157L15.2929 4L12.4645 6.82843C12.2692 7.02369 12.2692 7.34027 12.4645 7.53553C12.6597 7.7308 12.9763 7.7308 13.1716 7.53554L16.3536 4.35355ZM-4.37114e-08 4.5L16 4.5L16 3.5L4.37114e-08 3.5L-4.37114e-08 4.5Z" fill="#1B1B1B" />
+                </svg>
+
+              </span>
+            </div>
+            <div class="swiper-button instagram-button instagram-button-next">
+              <span class="icon">
+                <svg width="17" height="8" viewBox="0 0 17 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16.3536 4.35355C16.5488 4.15829 16.5488 3.84171 16.3536 3.64645L13.1716 0.464467C12.9763 0.269205 12.6597 0.269205 12.4645 0.464467C12.2692 0.659729 12.2692 0.976312 12.4645 1.17157L15.2929 4L12.4645 6.82843C12.2692 7.02369 12.2692 7.34027 12.4645 7.53553C12.6597 7.7308 12.9763 7.7308 13.1716 7.53554L16.3536 4.35355ZM-4.37114e-08 4.5L16 4.5L16 3.5L4.37114e-08 3.5L-4.37114e-08 4.5Z" fill="#1B1B1B" />
+                </svg>
+
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <div itemscope itemtype="http://schema.org/Organization" hidden>
+      <span itemprop="name">ООО "ДорСтройСервис"</span>
+      <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+        180559, Псковская обл., Псковский р-н, д. Родина, ул. Юбилейная д. 17
+      </div>
+      <span itemprop="telephone">{{base_info.phone_number}}</span>
+      <span itemprop="email">{{base_info.email}}</span>
+    </div>
+
+    <footer class="footer">
+      <div class="wrapper footer__wrapper">
+        <a href="/" class="footer__logo">
+          <img src="{% static 'index/images/logo.svg' %}" alt="ДорСтройСервис" title="ДорСтройСервис">
+        </a>
+        <div class="footer-content">
+          <div class="footer-content__top">
+            <nav class="footer-nav">
+              <ul class="footer-nav__list">
+                <li class="footer-nav__item">
+                  <!-- Активному пункту меню вывести класс active -->
+                  <a href="#0" class="footer-nav__link active">Главная</a>
+                </li>
+                <li class="footer-nav__item">
+                  <a href="#0" class="footer-nav__link">о нас</a>
+                </li>
+                <li class="footer-nav__item">
+                  <a href="#0" class="footer-nav__link">услуги</a>
+                </li>
+                <li class="footer-nav__item">
+                  <a href="#0" class="footer-nav__link">каталог</a>
+                </li>
+                <li class="footer-nav__item">
+                  <a href="#0" class="footer-nav__link">объекты</a>
+                </li>
+                <li class="footer-nav__item">
+                  <a href="#0" class="footer-nav__link">новости</a>
+                </li>
+                <li class="footer-nav__item">
+                  <a href="#0" class="footer-nav__link">производственная база</a>
+                </li>
+                <li class="footer-nav__item">
+                  <a href="#0" class="footer-nav__link">контакты</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="footer-content__bottom">
+            <div class="footer-contacts">
+              <a href="#0" class="footer-contacts__item footer-contacts__item--email">{{base_info.email}}</a>
+              <a href="#0" class="footer-contacts__item footer-contacts__item--phone">{{base_info.phone_number}}</a>
+            </div>
+
+            <div class="footer-left">
+              <div class="footer-socials">
+                <a href="{{base_info.instagram_link}}" class="footer-socials__item" target="_blank" title="Мы">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M22.2295 7.76217C22.1813 6.66913 22.0045 5.91767 21.7513 5.26653C21.4901 4.57535 21.0882 3.95655 20.5617 3.44213C20.0473 2.9197 19.4244 2.51376 18.7413 2.25663C18.0863 2.00342 17.3388 1.82666 16.2458 1.77847C15.1446 1.7262 14.795 1.71411 12.002 1.71411C9.20908 1.71411 8.85949 1.7262 7.76237 1.77439C6.66934 1.82258 5.91788 1.9995 5.26689 2.25255C4.57556 2.51376 3.95676 2.91562 3.44234 3.44213C2.91992 3.95655 2.51413 4.57943 2.25684 5.2626C2.00364 5.91767 1.82688 6.66505 1.77869 7.75809C1.72641 8.85929 1.71432 9.20888 1.71432 12.0018C1.71432 14.7948 1.72641 15.1444 1.7746 16.2415C1.8228 17.3345 1.99971 18.086 2.25292 18.7371C2.51413 19.4283 2.91992 20.0471 3.44234 20.5615C3.95676 21.084 4.57964 21.4899 5.26281 21.747C5.91788 22.0002 6.66525 22.177 7.75845 22.2252C8.85541 22.2735 9.20516 22.2855 11.9981 22.2855C14.7911 22.2855 15.1407 22.2735 16.2378 22.2252C17.3308 22.177 18.0823 22.0002 18.7333 21.747C20.1158 21.2125 21.2088 20.1195 21.7433 18.7371C21.9964 18.0821 22.1733 17.3345 22.2215 16.2415C22.2697 15.1444 22.2817 14.7948 22.2817 12.0018C22.2817 9.20888 22.2777 8.85929 22.2295 7.76217ZM20.377 16.1611C20.3327 17.1658 20.1639 17.7083 20.0233 18.07C19.6776 18.9662 18.9664 19.6774 18.0702 20.0231C17.7085 20.1638 17.1621 20.3325 16.1613 20.3766C15.0763 20.425 14.7509 20.4369 12.0061 20.4369C9.26136 20.4369 8.93186 20.425 7.85075 20.3766C6.84609 20.3325 6.30358 20.1638 5.9419 20.0231C5.49592 19.8583 5.08998 19.5971 4.76048 19.2555C4.4189 18.9219 4.15769 18.52 3.99286 18.0741C3.85221 17.7124 3.68346 17.1658 3.63935 16.1652C3.591 15.0802 3.57907 14.7546 3.57907 12.0098C3.57907 9.26508 3.591 8.93558 3.63935 7.85463C3.68346 6.84997 3.85221 6.30745 3.99286 5.94577C4.15769 5.49964 4.4189 5.09385 4.76456 4.7642C5.09799 4.42261 5.49985 4.1614 5.94598 3.99673C6.30766 3.85608 6.85426 3.68733 7.85483 3.64306C8.93987 3.59487 9.26544 3.58278 12.01 3.58278C14.7589 3.58278 15.0843 3.59487 16.1654 3.64306C17.1701 3.68733 17.7126 3.85608 18.0743 3.99673C18.5202 4.1614 18.9262 4.42261 19.2557 4.7642C19.5973 5.09778 19.8585 5.49964 20.0233 5.94577C20.1639 6.30745 20.3327 6.85389 20.377 7.85463C20.4252 8.93966 20.4372 9.26508 20.4372 12.0098C20.4372 14.7546 20.4252 15.0761 20.377 16.1611Z" fill="white" />
+                    <path d="M12.002 6.71765C9.08451 6.71765 6.71744 9.08457 6.71744 12.0022C6.71744 14.9198 9.08451 17.2867 12.002 17.2867C14.9195 17.2867 17.2865 14.9198 17.2865 12.0022C17.2865 9.08457 14.9195 6.71765 12.002 6.71765ZM12.002 15.4301C10.1093 15.4301 8.57402 13.895 8.57402 12.0022C8.57402 10.1093 10.1093 8.57423 12.002 8.57423C13.8948 8.57423 15.4299 10.1093 15.4299 12.0022C15.4299 13.895 13.8948 15.4301 12.002 15.4301Z" fill="white" />
+                    <path d="M18.729 6.50848C18.729 7.18976 18.1766 7.74217 17.4952 7.74217C16.8139 7.74217 16.2615 7.18976 16.2615 6.50848C16.2615 5.82703 16.8139 5.27478 17.4952 5.27478C18.1766 5.27478 18.729 5.82703 18.729 6.50848Z" fill="white" />
+                  </svg>
+
+                </a>
+                <a href="{{base_info.vk_link}}" class="footer-socials__item" target="_blank" title="Мы">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0)">
+                      <path d="M22.9365 18.1559C22.8743 18.0517 22.4896 17.2156 20.638 15.4971C18.6996 13.6976 18.96 13.9898 21.2947 10.8783C22.7167 8.98329 23.2852 7.82605 23.1072 7.33133C22.938 6.85975 21.8921 6.98416 21.8921 6.98416L18.4146 7.00441C18.4146 7.00441 18.1571 6.96969 17.9648 7.08397C17.7782 7.1968 17.6581 7.45718 17.6581 7.45718C17.6581 7.45718 17.107 8.92398 16.3721 10.1709C14.8229 12.8022 14.2023 12.9411 13.9491 12.7776C13.3604 12.3971 13.5079 11.2471 13.5079 10.4313C13.5079 7.88102 13.8942 6.8178 12.7543 6.54296C12.3753 6.45183 12.0976 6.39107 11.1298 6.38095C9.88868 6.36793 8.83704 6.38528 8.24251 6.67604C7.84615 6.86988 7.54093 7.3024 7.72754 7.32699C7.95754 7.35737 8.4783 7.4673 8.75459 7.84341C9.11188 8.328 9.09886 9.4187 9.09886 9.4187C9.09886 9.4187 9.30427 12.4203 8.62006 12.7935C8.14993 13.0495 7.50622 12.5273 6.12476 10.1391C5.4174 8.91675 4.88218 7.56422 4.88218 7.56422C4.88218 7.56422 4.77947 7.31252 4.59576 7.17799C4.37299 7.01453 4.06054 6.96246 4.06054 6.96246L0.75373 6.98271C0.75373 6.98271 0.257564 6.99718 0.0752993 7.21271C-0.0867141 7.4051 0.0622804 7.80146 0.0622804 7.80146C0.0622804 7.80146 2.6516 13.8582 5.58231 16.9118C8.27144 19.7109 11.3237 19.5272 11.3237 19.5272H12.7066C12.7066 19.5272 13.1246 19.4809 13.3373 19.2509C13.534 19.0397 13.5267 18.6434 13.5267 18.6434C13.5267 18.6434 13.4993 16.7874 14.3614 16.514C15.2105 16.245 16.3012 18.3078 17.457 19.1019C18.3307 19.7022 18.9947 19.5706 18.9947 19.5706L22.086 19.5272C22.086 19.5272 23.7032 19.4274 22.9365 18.1559Z" fill="white" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0">
+                        <path d="M0 0H24V24H0V0Z" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+
+                </a>
+              </div>
+
+              <a href="#write-us-modal" class="btn btn--orange footer__write-us" data-modal>Написать нам</a>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <a href="#0" class="footer-bottom__policy">Политика конфиденциальности</a>
+          <div class="footer-bottom__coffee">Сделано в агентстве интернет-рекламы
+            <a href="https://www.coffeestudio.ru/" target="_blank" rel="noopener noreferrer">Coffee Studio</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="loader">
+      <div class="lds-dual-ring"></div>
+    </div>
+    <!--<noindex>-->
+    <div id="cookie-policy-info" class="cookie-policy" role="alert">
+      <div class="wrapper">
+        <div class="cookie-policy-row">
+          <div class="cookie-policy-text">
+            Данный сайт использует «cookies» и сведения об устройстве в целях повышения удобства пользования сайтом. Продолжая работу с сайтом, вы соглашаетесь на обработку указанных выше данных. Подробнее о порядке обработки данных смотрите здесь. Если вы не хотите использовать файлы «cookies», измените настройки браузера или покиньте сайт.
+          </div>
+          <div class="cookie-policy-button">
+            <button class="btn btn--orange btn-cookies" id="cookie-policy-btn" type="button"><span>Принимаю</span></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--</noindex>-->
+  </div>
+
+  <div class="modal mfp-hide" id="write-us-modal">
+    <div class="header-block">
+      <div class="header-block__text header-block__text--2 header-block__text--black">Форма <br> обратной связи</div>
+    </div>
+      <form method="post" action="{% url 'index-page' %}">
+        {% csrf_token %}
+        <div class="modal-form">
+            <div class="required-fields__message"><span>*</span> - поля, обязательные для заполнения</div>
+    
+            <label class="input-group">
+                <!-- Errorlist сюда -->
+                <input type="text" class="input-group__input" name="name" placeholder="Сергеев Михаил" required>
+                <span class="input-group__title">Имя</span>
+            </label>
+            <label class="input-group">
+                <!-- Errorlist сюда -->
+                <input type="tel" class="input-group__input" name="phone_number" placeholder="8 (954) 342-11-23" required>
+                <span class="input-group__title">Телефон</span>
+            </label>
+            <label class="input-group">
+                <!-- Errorlist сюда -->
+                <input type="email" class="input-group__input" name="email" placeholder="adret1224@mail.ru">
+                <span class="input-group__title">E-mail</span>
+            </label>
+            <label class="input-group">
+                <!-- Errorlist сюда -->
+                <textarea class="input-group__textarea" name="message" placeholder="Текст вопроса"></textarea>
+                <span class="input-group__title">Вопрос</span>
+            </label>
+    
+            <div class="modal-form__policy">Отправляя форму, я соглашаюсь с
+                <a href="#0">политикой обработки персональных данных</a>
+            </div>
+    
+            <button type="submit" title="Отправить" class="btn btn--orange-fill modal-form__btn">Отправить</button>
+        </div>
+    </form>
+
+  <!-- Успешная отправка -->
+  <div class="modal mfp-hide" style="display: none;">
+    <div class="modal-success">
+      <span class="img">
+        <img src="{% static 'index/images/modal-success.svg' %}" alt="Ваше сообщение успешно отправлено" title="Ваше сообщение успешно отправлено">
+      </span>
+      <span class="title">Ваше сообщение успешно отправлено</span>
+    </div>
+  </div>
+
+  <script src="{% static 'index/js/combined.min.js' %}"></script>
+  <script src="{% static 'index/js/libs.js' %}"></script>
+
+  <script src="{% static 'index/js/index-scripts.js' %}"></script>
+  <div class="counters" hidden>
+    <!--    counters    -->
+  </div>
+
+</body>
+</html>

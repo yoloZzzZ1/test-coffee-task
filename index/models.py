@@ -57,6 +57,9 @@ class BaseInfo(models.Model):
 
 class Contact(models.Model):
 
+    """ Сообщения переданные через контактную форму на сайте
+    """ 
+   
     name = models.CharField(
         max_length=256,
         verbose_name='Имя',
